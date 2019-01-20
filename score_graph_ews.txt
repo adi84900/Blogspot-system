@@ -1,0 +1,183 @@
+	<script type="text/javascript">
+            var chart;
+            var chartData = [
+                {
+                    "month": '<?php echo date('M Y', strtotime('first day of -11 month'));?>',
+                    // "highrisk": <?php echo $count_r_r_twelve; ?>,
+                    // "mediumrisk": 20,
+                    "lowrisk":<?php echo $count_r_r_twelve; ?> 
+					// "urlhighrisk": "<?php echo BASE_URL; ?>/manage_ews.php?emp_id=&ews_status=1&assesment_month=<?php echo date('Y-m-d', strtotime('first day of -11 month'));?>&fromdate_filter=&todate_filter=&filter_submit=",
+					// "urlmediumrisk": "<?php echo BASE_URL; ?>/manage_ews.php?emp_id=&ews_status=2&assesment_month=<?php echo date('Y-m-d', strtotime('first day of -11 month'));?>&fromdate_filter=&todate_filter=&filter_submit=",
+					// "urllowrisk": "<?php echo BASE_URL; ?>/manage_ews.php?emp_id=&ews_status=3&assesment_month=<?php echo date('Y-m-d', strtotime('first day of -11 month'));?>&fromdate_filter=&todate_filter=&filter_submit="
+                },
+                {
+                    "month": '<?php echo date('M Y', strtotime('first day of -10 month'));?>',
+                    // "highrisk":18 ,
+                    // "mediumrisk":18 ,
+                    "lowrisk": <?php echo $count_r_r_eleven; ?>
+					// "urlhighrisk": "<?php echo BASE_URL; ?>/manage_ews.php?emp_id=&ews_status=1&assesment_month=<?php echo date('Y-m-d', strtotime('first day of -10 month'));?>&fromdate_filter=&todate_filter=&filter_submit=",
+					// "urlmediumrisk": "<?php echo BASE_URL; ?>/manage_ews.php?emp_id=&ews_status=2&assesment_month=<?php echo date('Y-m-d', strtotime('first day of -10 month'));?>&fromdate_filter=&todate_filter=&filter_submit=",
+					// "urllowrisk": "<?php echo BASE_URL; ?>/manage_ews.php?emp_id=&ews_status=3&assesment_month=<?php echo date('Y-m-d', strtotime('first day of -10 month'));?>&fromdate_filter=&todate_filter=&filter_submit="
+                },
+                {
+                    "month": '<?php echo date('M Y', strtotime('first day of -9 month'));?>',
+                    // "highrisk": 16,
+                    // "mediumrisk":16 ,
+                    "lowrisk":<?php echo $count_r_r_ten; ?>
+					// "urlhighrisk": "<?php echo BASE_URL; ?>/manage_ews.php?emp_id=&ews_status=1&assesment_month=<?php echo date('Y-m-d', strtotime('first day of -9 month'));?>&fromdate_filter=&todate_filter=&filter_submit=",
+					// "urlmediumrisk": "<?php echo BASE_URL; ?>/manage_ews.php?emp_id=&ews_status=2&assesment_month=<?php echo date('Y-m-d', strtotime('first day of -9 month'));?>&fromdate_filter=&todate_filter=&filter_submit=",
+					// "urllowrisk": "<?php echo BASE_URL; ?>/manage_ews.php?emp_id=&ews_status=3&assesment_month=<?php echo date('Y-m-d', strtotime('first day of -9 month'));?>&fromdate_filter=&todate_filter=&filter_submit="
+                },
+                {
+                    "month": '<?php echo date('M Y', strtotime('first day of -8 month'));?>',
+                    // "highrisk": 14,
+                    // "mediumrisk":14 ,
+                    "lowrisk": <?php echo $count_r_r_nine; ?>
+					// "urlhighrisk": "<?php echo BASE_URL; ?>/manage_ews.php?emp_id=&ews_status=1&assesment_month=<?php echo date('Y-m-d', strtotime('first day of -8 month'));?>&fromdate_filter=&todate_filter=&filter_submit=",
+					// "urlmediumrisk": "<?php echo BASE_URL; ?>/manage_ews.php?emp_id=&ews_status=2&assesment_month=<?php echo date('Y-m-d', strtotime('first day of -8 month'));?>&fromdate_filter=&todate_filter=&filter_submit=",
+					// "urllowrisk": "<?php echo BASE_URL; ?>/manage_ews.php?emp_id=&ews_status=3&assesment_month=<?php echo date('Y-m-d', strtotime('first day of -8 month'));?>&fromdate_filter=&todate_filter=&filter_submit="
+                },
+                {
+                    "month": '<?php echo date('M Y', strtotime('first day of -7 month'));?>',
+                    // "highrisk": 12,
+                    // "mediumrisk":12 ,
+                    "lowrisk":<?php echo $count_r_r_eight; ?>
+					// "urlhighrisk": "<?php echo BASE_URL; ?>/manage_ews.php?emp_id=&ews_status=1&assesment_month=<?php echo date('Y-m-d', strtotime('first day of -7 month'));?>&fromdate_filter=&todate_filter=&filter_submit=",
+					// "urlmediumrisk": "<?php echo BASE_URL; ?>/manage_ews.php?emp_id=&ews_status=2&assesment_month=<?php echo date('Y-m-d', strtotime('first day of -7 month'));?>&fromdate_filter=&todate_filter=&filter_submit=",
+					// "urllowrisk": "<?php echo BASE_URL; ?>/manage_ews.php?emp_id=&ews_status=3&assesment_month=<?php echo date('Y-m-d', strtotime('first day of -7 month'));?>&fromdate_filter=&todate_filter=&filter_submit="
+                },
+                {
+                    "month": '<?php echo date('M Y', strtotime('first day of -6 month'));?>',
+                    // "highrisk": 10,
+                    // "mediumrisk": 10,
+                    "lowrisk": <?php echo $count_r_r_seven; ?>
+					// "urlhighrisk": "<?php echo BASE_URL; ?>/manage_ews.php?emp_id=&ews_status=1&assesment_month=<?php echo date('Y-m-d', strtotime('first day of -6 month'));?>&fromdate_filter=&todate_filter=&filter_submit=",
+					// "urlmediumrisk": "<?php echo BASE_URL; ?>/manage_ews.php?emp_id=&ews_status=2&assesment_month=<?php echo date('Y-m-d', strtotime('first day of -6 month'));?>&fromdate_filter=&todate_filter=&filter_submit=",
+					// "urllowrisk": "<?php echo BASE_URL; ?>/manage_ews.php?emp_id=&ews_status=3&assesment_month=<?php echo date('Y-m-d', strtotime('first day of -6 month'));?>&fromdate_filter=&todate_filter=&filter_submit="
+                },
+                {
+                    "month": '<?php echo date('M Y', strtotime('first day of -5 month'));?>',
+                    // "highrisk": 8,
+                    // "mediumrisk": 8,
+                    "lowrisk": <?php echo $count_r_r_six; ?>
+					// "urlhighrisk": "<?php echo BASE_URL; ?>/manage_ews.php?emp_id=&ews_status=1&assesment_month=<?php echo date('Y-m-d', strtotime('first day of -5 month'));?>&fromdate_filter=&todate_filter=&filter_submit=",
+					// "urlmediumrisk": "<?php echo BASE_URL; ?>/manage_ews.php?emp_id=&ews_status=2&assesment_month=<?php echo date('Y-m-d', strtotime('first day of -5 month'));?>&fromdate_filter=&todate_filter=&filter_submit=",
+					// "urllowrisk": "<?php echo BASE_URL; ?>/manage_ews.php?emp_id=&ews_status=3&assesment_month=<?php echo date('Y-m-d', strtotime('first day of -5 month'));?>&fromdate_filter=&todate_filter=&filter_submit="
+                },
+                {
+                    "month": '<?php echo date('M Y', strtotime('first day of -4 month'));?>',
+                    // "highrisk": 6,
+                    // "mediumrisk": 6,
+                    "lowrisk": <?php echo $count_r_r_five; ?>
+					// "urlhighrisk": "<?php echo BASE_URL; ?>/manage_ews.php?emp_id=&ews_status=1&assesment_month=<?php echo date('Y-m-d', strtotime('first day of -4 month'));?>&fromdate_filter=&todate_filter=&filter_submit=",
+					// "urlmediumrisk": "<?php echo BASE_URL; ?>/manage_ews.php?emp_id=&ews_status=2&assesment_month=<?php echo date('Y-m-d', strtotime('first day of -4 month'));?>&fromdate_filter=&todate_filter=&filter_submit=",
+					// "urllowrisk": "<?php echo BASE_URL; ?>/manage_ews.php?emp_id=&ews_status=3&assesment_month=<?php echo date('Y-m-d', strtotime('first day of -4 month'));?>&fromdate_filter=&todate_filter=&filter_submit="
+                },
+                {
+                     "month": '<?php echo date('M Y', strtotime('first day of -3 month'));?>',
+                    //  "highrisk": 4,
+                    // "mediumrisk": 4,
+                    "lowrisk": <?php echo $count_r_r_four; ?>
+					// "urlhighrisk": "<?php echo BASE_URL; ?>/manage_ews.php?emp_id=&ews_status=1&assesment_month=<?php echo date('Y-m-d', strtotime('first day of -3 month'));?>&fromdate_filter=&todate_filter=&filter_submit=",
+					// "urlmediumrisk": "<?php echo BASE_URL; ?>/manage_ews.php?emp_id=&ews_status=2&assesment_month=<?php echo date('Y-m-d', strtotime('first day of -3 month'));?>&fromdate_filter=&todate_filter=&filter_submit=",
+					// "urllowrisk": "<?php echo BASE_URL; ?>/manage_ews.php?emp_id=&ews_status=3&assesment_month=<?php echo date('Y-m-d', strtotime('first day of -3 month'));?>&fromdate_filter=&todate_filter=&filter_submit="
+                },
+                {
+                    "month": '<?php echo date('M Y', strtotime('first day of -2 month'));?>',
+                    // "highrisk": 3,
+                    // "mediumrisk": 3,
+                    "lowrisk": <?php echo $count_r_r_three; ?>
+					// "urlhighrisk": "<?php echo BASE_URL; ?>/manage_ews.php?emp_id=&ews_status=1&assesment_month=<?php echo date('Y-m-d', strtotime('first day of -2 month'));?>&fromdate_filter=&todate_filter=&filter_submit=",
+					// "urlmediumrisk": "<?php echo BASE_URL; ?>/manage_ews.php?emp_id=&ews_status=2&assesment_month=<?php echo date('Y-m-d', strtotime('first day of -2 month'));?>&fromdate_filter=&todate_filter=&filter_submit=",
+					// "urllowrisk": "<?php echo BASE_URL; ?>/manage_ews.php?emp_id=&ews_status=3&assesment_month=<?php echo date('Y-m-d', strtotime('first day of -2 month'));?>&fromdate_filter=&todate_filter=&filter_submit="
+                },
+                {
+                    "month": '<?php echo date('M Y', strtotime('first day of -1 month'));?>',
+                    // "highrisk": 3,
+                    // "mediumrisk": 3,
+                    "lowrisk": <?php echo $count_r_r_two; ?>
+					// "urlhighrisk": "<?php echo BASE_URL; ?>/manage_ews.php?emp_id=&ews_status=1&assesment_month=<?php echo date('Y-m-d', strtotime('first day of -1 month'));?>&fromdate_filter=&todate_filter=&filter_submit=",
+					// "urlmediumrisk": "<?php echo BASE_URL; ?>/manage_ews.php?emp_id=&ews_status=2&assesment_month=<?php echo date('Y-m-d', strtotime('first day of -1 month'));?>&fromdate_filter=&todate_filter=&filter_submit=",
+					// "urllowrisk": "<?php echo BASE_URL; ?>/manage_ews.php?emp_id=&ews_status=3&assesment_month=<?php echo date('Y-m-d', strtotime('first day of -1 month'));?>&fromdate_filter=&todate_filter=&filter_submit="
+                },
+				{
+                    "month": '<?php echo date('M Y', strtotime('first day of this month'));?>',
+                    // "highrisk": 2,
+                    // "mediumrisk": 2,
+                    "lowrisk": <?php echo $count_r_r_one; ?>
+					// "urlhighrisk": "<?php echo BASE_URL; ?>/manage_ews.php?emp_id=&ews_status=1&assesment_month=<?php echo date('Y-m-d', strtotime('first day of this month'));?>&fromdate_filter=&todate_filter=&filter_submit=",
+					// "urlmediumrisk": "<?php echo BASE_URL; ?>/manage_ews.php?emp_id=&ews_status=2&assesment_month=<?php echo date('Y-m-d', strtotime('first day of this month'));?>&fromdate_filter=&todate_filter=&filter_submit=",
+					// "urllowrisk": "<?php echo BASE_URL; ?>/manage_ews.php?emp_id=&ews_status=3&assesment_month=<?php echo date('Y-m-d', strtotime('first day of this month'));?>&fromdate_filter=&todate_filter=&filter_submit="
+                }
+            ];
+            AmCharts.ready(function () {
+                // SERIAL CHART
+                chart = new AmCharts.AmSerialChart();
+                chart.dataProvider = chartData;
+                chart.categoryField = "month";
+                chart.startDuration = .3;
+                chart.balloon.color = "#000000";
+
+                // AXES
+                // category
+                var categoryAxis = chart.categoryAxis;
+                categoryAxis.fillAlpha = 1;
+                categoryAxis.fillColor = "#FAFAFA";
+                categoryAxis.gridAlpha = 0;
+                categoryAxis.axisAlpha = 0;
+				categoryAxis.title = "Months";
+                categoryAxis.gridPosition = "start";
+                categoryAxis.position = "bottom";
+
+                // value
+                var valueAxis = new AmCharts.ValueAxis();
+                valueAxis.dashLength = 5;
+                valueAxis.axisAlpha = 0;
+                valueAxis.integersOnly = true;
+				valueAxis.title = "EWS Score";
+                valueAxis.gridCount = 10;
+                valueAxis.reversed = false; // this line makes the value axis reversed
+                chart.addValueAxis(valueAxis);
+
+                // GRAPHS
+                // High Risk graph
+                var graph = new AmCharts.AmGraph();
+                graph.title = "High Risk";
+				graph.lineColor = "#dd4b39";
+                graph.valueField = "highrisk";
+				graph.urlField = "urlhighrisk";
+                graph.balloonText = "<span style='color:#dd4b39'><b>[[title]]</b></span><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>";
+                graph.bullet = "round";
+				graph.bulletSize = 15;
+				graph.lineThickness = 1.5;
+                chart.addGraph(graph);
+
+                // Medium Risk graph
+                var graph = new AmCharts.AmGraph();
+                graph.title = "Medium Risk";
+				graph.lineColor = "#f39c12";
+                graph.valueField = "mediumrisk";
+				graph.urlField = "urlmediumrisk";
+                graph.balloonText = "<span style='color:#f39c12'><b>[[title]]</b></span><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>";
+                graph.bullet = "round";
+				graph.bulletSize = 10;
+				graph.lineThickness = 1.5;
+                chart.addGraph(graph);
+
+                // Low Risk graph
+                var graph = new AmCharts.AmGraph();
+                graph.title = "Score";
+				graph.lineColor = "#00a65a";
+                graph.valueField = "lowrisk";
+				graph.urlField = "urllowrisk";
+                graph.balloonText = "<span style='color:#00a65a'><b>[[title]]</b></span><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>";
+                graph.bullet = "round";
+				graph.bulletSize = 8;
+				graph.lineThickness = 1.5;
+                chart.addGraph(graph);
+
+                // WRITE
+                chart.write("chartdivtrends");
+            });
+        </script>
+
