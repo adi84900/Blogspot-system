@@ -63,8 +63,298 @@ $mysql = new mysql();
   {
   $emp_id='';
   }
-   
-  
+
+  $ews_detail_11months=  $mysql->select(array('table'=>'ews_detail','fields'=>'*','condition'=>'emp_id='.$emp_id.' and YEAR(assesment_month) = YEAR(CURRENT_DATE - INTERVAL 11 MONTH) and MONTH(assesment_month) = MONTH(CURRENT_DATE - INTERVAL 11 MONTH)'));
+                            $count_r_r_twelve=0;
+                            $count_one_on_one_twelve=0;
+                            $count_perfomance_twelve=0;
+                            $count_leave_r_twelve=0;
+                            $count_external_interviews_twelve=0;
+                            $count_behavior_motivation_twelve=0;
+                            $count_personal_effectiveness_twelve=0;
+                            $count_career_growth_twelve=0;
+                            $count_skill_set_twelve=0;
+						  foreach($ews_detail_11months as $key=>$value)
+								{
+						$count_one_on_one_twelve=$value['ews_detail']['one_on_one_ass'];
+			            $count_perfomance_twelve=$value['ews_detail']['performance'];
+			            $count_leave_r_twelve=$value['ews_detail']['leave_r'];
+                        $count_external_interviews_twelve=$value['ews_detail']['external_interviews'];
+                        $count_behavior_motivation_twelve=$value['ews_detail']['behavior_motivation'];
+                        $count_personal_effectiveness_twelve=$value['ews_detail']['personal_effectiveness'];
+                        $count_career_growth_twelve=$value['ews_detail']['career_growth'];
+                        $count_skill_set_twelve=$value['ews_detail']['skill_set'];
+
+								$events_detail_total=$value['ews_detail']['one_on_one_ass']+$value['ews_detail']['performance']+$value['ews_detail']['leave_r']+$value['ews_detail']['external_interviews']+$value['ews_detail']['behavior_motivation']+$value['ews_detail']['personal_effectiveness']+$value['ews_detail']['career_growth']+$value['ews_detail']['skill_set'];
+								$count_r_r_twelve = $events_detail_total;
+							}
+
+$ews_detail_10months=  $mysql->select(array('table'=>'ews_detail','fields'=>'*','condition'=>'emp_id='.$emp_id.' and YEAR(assesment_month) = YEAR(CURRENT_DATE - INTERVAL 10 MONTH) and MONTH(assesment_month) = MONTH(CURRENT_DATE - INTERVAL 10 MONTH)'));
+                            $count_r_r_eleven=0;
+                            $count_one_on_one_eleven=0;
+                            $count_perfomance_eleven=0;
+                            $count_leave_r_eleven=0;
+                            $count_external_interviews_eleven=0;
+                            $count_behavior_motivation_eleven=0;
+                            $count_personal_effectiveness_eleven=0;
+                            $count_career_growth_eleven=0;
+                            $count_skill_set_eleven=0;
+
+						  foreach($ews_detail_10months as $key=>$value)
+								{
+									$count_one_on_one_eleven=$value['ews_detail']['one_on_one_ass'];
+                        $count_perfomance_eleven=$value['ews_detail']['performance'];
+                        $count_leave_r_eleven=$value['ews_detail']['leave_r'];
+                        $count_external_interviews_eleven=$value['ews_detail']['external_interviews'];
+                        $count_behavior_motivation_eleven=$value['ews_detail']['behavior_motivation'];
+                        $count_personal_effectiveness_eleven=$value['ews_detail']['personal_effectiveness'];
+                        $count_career_growth_eleven=$value['ews_detail']['career_growth'];
+                        $count_skill_set_eleven=$value['ews_detail']['skill_set'];
+								$events_detail_total=$value['ews_detail']['one_on_one_ass']+$value['ews_detail']['performance']+$value['ews_detail']['leave_r']+$value['ews_detail']['external_interviews']+$value['ews_detail']['behavior_motivation']+$value['ews_detail']['personal_effectiveness']+$value['ews_detail']['career_growth']+$value['ews_detail']['skill_set'];
+								$count_r_r_eleven = $events_detail_total;
+							}
+
+$ews_detail_9months=  $mysql->select(array('table'=>'ews_detail','fields'=>'*','condition'=>'emp_id='.$emp_id.' and YEAR(assesment_month) = YEAR(CURRENT_DATE - INTERVAL 9 MONTH) and MONTH(assesment_month) = MONTH(CURRENT_DATE - INTERVAL 9 MONTH)'));
+                            $count_r_r_ten=0;
+                            $count_one_on_one_ten=0;
+                            $count_perfomance_ten=0;
+                            $count_leave_r_ten=0;
+                            $count_external_interviews_ten=0;
+                            $count_behavior_motivation_ten=0;
+                            $count_personal_effectiveness_ten=0;
+                            $count_career_growth_ten=0;
+                            $count_skill_set_ten=0;
+						  foreach($ews_detail_9months as $key=>$value)
+								{
+									$count_one_on_one_ten=$value['ews_detail']['one_on_one_ass'];
+                        $count_perfomance_ten=$value['ews_detail']['performance'];
+                        $count_leave_r_ten=$value['ews_detail']['leave_r'];
+                        $count_external_interviews_ten=$value['ews_detail']['external_interviews'];
+                        $count_behavior_motivation_ten=$value['ews_detail']['behavior_motivation'];
+                        $count_personal_effectiveness_ten=$value['ews_detail']['personal_effectiveness'];
+                        $count_career_growth_ten=$value['ews_detail']['career_growth'];
+                        $count_skill_set_ten=$value['ews_detail']['skill_set'];
+								$events_detail_total=$value['ews_detail']['one_on_one_ass']+$value['ews_detail']['performance']+$value['ews_detail']['leave_r']+$value['ews_detail']['external_interviews']+$value['ews_detail']['behavior_motivation']+$value['ews_detail']['personal_effectiveness']+$value['ews_detail']['career_growth']+$value['ews_detail']['skill_set'];
+								$count_r_r_ten = $events_detail_total;
+							}
+$ews_detail_8months=  $mysql->select(array('table'=>'ews_detail','fields'=>'*','condition'=>'emp_id='.$emp_id.' and YEAR(assesment_month) = YEAR(CURRENT_DATE - INTERVAL 8 MONTH) and MONTH(assesment_month) = MONTH(CURRENT_DATE - INTERVAL 8 MONTH)'));
+                            $count_r_r_nine=0;
+                            $count_one_on_one_nine=0;
+                            $count_perfomance_nine=0;
+                            $count_leave_r_nine=0;
+                            $count_external_interviews_nine=0;
+                            $count_behavior_motivation_nine=0;
+                            $count_personal_effectiveness_nine=0;
+                            $count_career_growth_nine=0;
+                            $count_skill_set_nine=0;
+						  foreach($ews_detail_8months as $key=>$value)
+								{
+									$count_one_on_one_nine=$value['ews_detail']['one_on_one_ass'];
+                        $count_perfomance_nine=$value['ews_detail']['performance'];
+                        $count_leave_r_nine=$value['ews_detail']['leave_r'];
+                        $count_external_interviews_nine=$value['ews_detail']['external_interviews'];
+                        $count_behavior_motivation_nine=$value['ews_detail']['behavior_motivation'];
+                        $count_personal_effectiveness_nine=$value['ews_detail']['personal_effectiveness'];
+                        $count_career_growth_nine=$value['ews_detail']['career_growth'];
+                        $count_skill_set_nine=$value['ews_detail']['skill_set'];
+
+								$events_detail_total=$value['ews_detail']['one_on_one_ass']+$value['ews_detail']['performance']+$value['ews_detail']['leave_r']+$value['ews_detail']['external_interviews']+$value['ews_detail']['behavior_motivation']+$value['ews_detail']['personal_effectiveness']+$value['ews_detail']['career_growth']+$value['ews_detail']['skill_set'];
+								$count_r_r_nine = $events_detail_total;
+							}
+$ews_detail_7months=  $mysql->select(array('table'=>'ews_detail','fields'=>'*','condition'=>'emp_id='.$emp_id.' and YEAR(assesment_month) = YEAR(CURRENT_DATE - INTERVAL 7 MONTH) and MONTH(assesment_month) = MONTH(CURRENT_DATE - INTERVAL 7 MONTH)'));
+                            $count_r_r_eight=0;
+                            $count_one_on_one_eight=0;
+                            $count_perfomance_eight=0;
+                            $count_leave_r_eight=0;
+                            $count_external_interviews_eight=0;
+                            $count_behavior_motivation_eight=0;
+                            $count_personal_effectiveness_eight=0;
+                            $count_career_growth_eight=0;
+                            $count_skill_set_eight=0;
+						  foreach($ews_detail_7months as $key=>$value)
+								{
+									$count_one_on_one_eight=$value['ews_detail']['one_on_one_ass'];
+                        $count_perfomance_eight=$value['ews_detail']['performance'];
+                        $count_leave_r_eight=$value['ews_detail']['leave_r'];
+                        $count_external_interviews_eight=$value['ews_detail']['external_interviews'];
+                        $count_behavior_motivation_eight=$value['ews_detail']['behavior_motivation'];
+                        $count_personal_effectiveness_eight=$value['ews_detail']['personal_effectiveness'];
+                        $count_career_growth_eight=$value['ews_detail']['career_growth'];
+                        $count_skill_set_eight=$value['ews_detail']['skill_set'];
+								$events_detail_total=$value['ews_detail']['one_on_one_ass']+$value['ews_detail']['performance']+$value['ews_detail']['leave_r']+$value['ews_detail']['external_interviews']+$value['ews_detail']['behavior_motivation']+$value['ews_detail']['personal_effectiveness']+$value['ews_detail']['career_growth']+$value['ews_detail']['skill_set'];
+								$count_r_r_eight = $events_detail_total;
+							}
+
+$ews_detail_6months=  $mysql->select(array('table'=>'ews_detail','fields'=>'*','condition'=>'emp_id='.$emp_id.' and YEAR(assesment_month) = YEAR(CURRENT_DATE - INTERVAL 6 MONTH) and MONTH(assesment_month) = MONTH(CURRENT_DATE - INTERVAL 6 MONTH)'));
+                            $count_r_r_seven=0;
+                            $count_one_on_one_seven=0;
+                            $count_perfomance_seven=0;
+                            $count_leave_r_seven=0;
+                            $count_external_interviews_seven=0;
+                            $count_behavior_motivation_seven=0;
+                            $count_personal_effectiveness_seven=0;
+                            $count_career_growth_seven=0;
+                            $count_skill_set_seven=0;
+						  foreach($ews_detail_6months as $key=>$value)
+								{
+									$count_one_on_one_seven=$value['ews_detail']['one_on_one_ass'];
+                        $count_perfomance_seven=$value['ews_detail']['performance'];
+                        $count_leave_r_seven=$value['ews_detail']['leave_r'];
+                        $count_external_interviews_seven=$value['ews_detail']['external_interviews'];
+                        $count_behavior_motivation_seven=$value['ews_detail']['behavior_motivation'];
+                        $count_personal_effectiveness_seven=$value['ews_detail']['personal_effectiveness'];
+                        $count_career_growth_seven=$value['ews_detail']['career_growth'];
+                        $count_skill_set_seven=$value['ews_detail']['skill_set'];
+
+								$events_detail_total=$value['ews_detail']['one_on_one_ass']+$value['ews_detail']['performance']+$value['ews_detail']['leave_r']+$value['ews_detail']['external_interviews']+$value['ews_detail']['behavior_motivation']+$value['ews_detail']['personal_effectiveness']+$value['ews_detail']['career_growth']+$value['ews_detail']['skill_set'];
+								$count_r_r_seven = $events_detail_total;
+							}
+
+$ews_detail_5months=  $mysql->select(array('table'=>'ews_detail','fields'=>'*','condition'=>'emp_id='.$emp_id.' and YEAR(assesment_month) = YEAR(CURRENT_DATE - INTERVAL 5 MONTH) and MONTH(assesment_month) = MONTH(CURRENT_DATE - INTERVAL 5 MONTH)'));
+                            $count_r_r_six=0;
+                            $count_one_on_one_six=0;
+                            $count_perfomance_six=0;
+                            $count_leave_r_six=0;
+                            $count_external_interviews_six=0;
+                            $count_behavior_motivation_six=0;
+                            $count_personal_effectiveness_six=0;
+                            $count_career_growth_six=0;
+                            $count_skill_set_six=0;
+						  foreach($ews_detail_5months as $key=>$value)
+								{
+									$count_one_on_one_six=$value['ews_detail']['one_on_one_ass'];
+                        $count_perfomance_six=$value['ews_detail']['performance'];
+                        $count_leave_r_six=$value['ews_detail']['leave_r'];
+                        $count_external_interviews_six=$value['ews_detail']['external_interviews'];
+                        $count_behavior_motivation_six=$value['ews_detail']['behavior_motivation'];
+                        $count_personal_effectiveness_six=$value['ews_detail']['personal_effectiveness'];
+                        $count_career_growth_six=$value['ews_detail']['career_growth'];
+                        $count_skill_set_six=$value['ews_detail']['skill_set'];
+								$events_detail_total=$value['ews_detail']['one_on_one_ass']+$value['ews_detail']['performance']+$value['ews_detail']['leave_r']+$value['ews_detail']['external_interviews']+$value['ews_detail']['behavior_motivation']+$value['ews_detail']['personal_effectiveness']+$value['ews_detail']['career_growth']+$value['ews_detail']['skill_set'];
+								$count_r_r_six = $events_detail_total;
+							}
+$ews_detail_4months=  $mysql->select(array('table'=>'ews_detail','fields'=>'*','condition'=>'emp_id='.$emp_id.' and YEAR(assesment_month) = YEAR(CURRENT_DATE - INTERVAL 4 MONTH) and MONTH(assesment_month) = MONTH(CURRENT_DATE - INTERVAL 4 MONTH)'));
+                            $count_r_r_five=0;
+                            $count_one_on_one_five=0;
+                            $count_perfomance_five=0;
+                            $count_leave_r_five=0;
+                            $count_external_interviews_five=0;
+                            $count_behavior_motivation_five=0;
+                            $count_personal_effectiveness_five=0;
+                            $count_career_growth_five=0;
+                            $count_skill_set_five=0;
+						  foreach($ews_detail_4months as $key=>$value)
+								{
+									$count_one_on_one_five=$value['ews_detail']['one_on_one_ass'];
+                        $count_perfomance_five=$value['ews_detail']['performance'];
+                        $count_leave_r_five=$value['ews_detail']['leave_r'];
+                        $count_external_interviews_five=$value['ews_detail']['external_interviews'];
+                        $count_behavior_motivation_five=$value['ews_detail']['behavior_motivation'];
+                        $count_personal_effectiveness_five=$value['ews_detail']['personal_effectiveness'];
+                        $count_career_growth_five=$value['ews_detail']['career_growth'];
+                        $count_skill_set_five=$value['ews_detail']['skill_set'];
+
+								$events_detail_total=$value['ews_detail']['one_on_one_ass']+$value['ews_detail']['performance']+$value['ews_detail']['leave_r']+$value['ews_detail']['external_interviews']+$value['ews_detail']['behavior_motivation']+$value['ews_detail']['personal_effectiveness']+$value['ews_detail']['career_growth']+$value['ews_detail']['skill_set'];
+								$count_r_r_five = $events_detail_total;
+							}
+
+$ews_detail_3months=  $mysql->select(array('table'=>'ews_detail','fields'=>'*','condition'=>'emp_id='.$emp_id.' and YEAR(assesment_month) = YEAR(CURRENT_DATE - INTERVAL 3 MONTH) and MONTH(assesment_month) = MONTH(CURRENT_DATE - INTERVAL 3 MONTH)'));
+                            $count_r_r_four=0;
+                            $count_one_on_one_four=0;
+                            $count_perfomance_four=0;
+                            $count_leave_r_four=0;
+                            $count_external_interviews_four=0;
+                            $count_behavior_motivation_four=0;
+                            $count_personal_effectiveness_four=0;
+                            $count_career_growth_four=0;
+                            $count_skill_set_four=0;
+						  foreach($ews_detail_3months as $key=>$value)
+								{
+									$count_one_on_one_four=$value['ews_detail']['one_on_one_ass'];
+                        $count_perfomance_four=$value['ews_detail']['performance'];
+                        $count_leave_r_four=$value['ews_detail']['leave_r'];
+                        $count_external_interviews_four=$value['ews_detail']['external_interviews'];
+                        $count_behavior_motivation_four=$value['ews_detail']['behavior_motivation'];
+                        $count_personal_effectiveness_four=$value['ews_detail']['personal_effectiveness'];
+                        $count_career_growth_four=$value['ews_detail']['career_growth'];
+                        $count_skill_set_four=$value['ews_detail']['skill_set'];
+								$events_detail_total=$value['ews_detail']['one_on_one_ass']+$value['ews_detail']['performance']+$value['ews_detail']['leave_r']+$value['ews_detail']['external_interviews']+$value['ews_detail']['behavior_motivation']+$value['ews_detail']['personal_effectiveness']+$value['ews_detail']['career_growth']+$value['ews_detail']['skill_set'];
+								$count_r_r_four = $events_detail_total;
+							}
+
+$ews_detail_2months=  $mysql->select(array('table'=>'ews_detail','fields'=>'*','condition'=>'emp_id='.$emp_id.' and YEAR(assesment_month) = YEAR(CURRENT_DATE - INTERVAL 2 MONTH) and MONTH(assesment_month) = MONTH(CURRENT_DATE - INTERVAL 2 MONTH)'));
+                            $count_r_r_three=0;
+                            $count_one_on_one_three=0;
+                            $count_perfomance_three=0;
+                            $count_leave_r_three=0;
+                            $count_external_interviews_three=0;
+                            $count_behavior_motivation_three=0;
+                            $count_personal_effectiveness_three=0;
+                            $count_career_growth_three=0;
+                            $count_skill_set_three=0;
+						  foreach($ews_detail_2months as $key=>$value)
+								{
+									$count_one_on_one_three=$value['ews_detail']['one_on_one_ass'];
+                        $count_perfomance_three=$value['ews_detail']['performance'];
+                        $count_leave_r_three=$value['ews_detail']['leave_r'];
+                        $count_external_interviews_three=$value['ews_detail']['external_interviews'];
+                        $count_behavior_motivation_three=$value['ews_detail']['behavior_motivation'];
+                        $count_personal_effectiveness_three=$value['ews_detail']['personal_effectiveness'];
+                        $count_career_growth_three=$value['ews_detail']['career_growth'];
+                        $count_skill_set_three=$value['ews_detail']['skill_set'];
+								$events_detail_total=$value['ews_detail']['one_on_one_ass']+$value['ews_detail']['performance']+$value['ews_detail']['leave_r']+$value['ews_detail']['external_interviews']+$value['ews_detail']['behavior_motivation']+$value['ews_detail']['personal_effectiveness']+$value['ews_detail']['career_growth']+$value['ews_detail']['skill_set'];
+								$count_r_r_three = $events_detail_total;
+							}
+
+$ews_detail_1months=  $mysql->select(array('table'=>'ews_detail','fields'=>'*','condition'=>'emp_id='.$emp_id.' and YEAR(assesment_month) = YEAR(CURRENT_DATE - INTERVAL 1 MONTH) and MONTH(assesment_month) = MONTH(CURRENT_DATE - INTERVAL 1 MONTH)'));
+                            $count_r_r_two=0;
+                            $count_one_on_one_two=0;
+                            $count_perfomance_two=0;
+                            $count_leave_r_two=0;
+                            $count_external_interviews_two=0;
+                            $count_behavior_motivation_two=0;
+                            $count_personal_effectiveness_two=0;
+                            $count_career_growth_two=0;
+                            $count_skill_set_two=0;
+						  foreach($ews_detail_1months as $key=>$value)
+								{
+
+                      $count_one_on_one_two=$value['ews_detail']['one_on_one_ass'];
+                        $count_perfomance_two=$value['ews_detail']['performance'];
+                        $count_leave_r_two=$value['ews_detail']['leave_r'];
+                        $count_external_interviews_two=$value['ews_detail']['external_interviews'];
+                        $count_behavior_motivation_two=$value['ews_detail']['behavior_motivation'];
+                        $count_personal_effectiveness_two=$value['ews_detail']['personal_effectiveness'];
+                        $count_career_growth_two=$value['ews_detail']['career_growth'];
+                        $count_skill_set_two=$value['ews_detail']['skill_set'];
+								$events_detail_total=$value['ews_detail']['one_on_one_ass']+$value['ews_detail']['performance']+$value['ews_detail']['leave_r']+$value['ews_detail']['external_interviews']+$value['ews_detail']['behavior_motivation']+$value['ews_detail']['personal_effectiveness']+$value['ews_detail']['career_growth']+$value['ews_detail']['skill_set'];
+								$count_r_r_two = $events_detail_total;
+							}
+
+$ews_detail_lastmonths= $mysql->select(array('table'=>'ews_detail','fields'=>'*','condition'=>'emp_id='.$emp_id.' and YEAR(assesment_month) = YEAR(CURRENT_DATE())
+							and MONTH(assesment_month) = MONTH(CURRENT_DATE())'));
+                            $count_r_r_one=0;
+                            $count_one_on_one_one=0;
+                            $count_perfomance_one=0;
+                            $count_leave_r_one=0;
+                            $count_external_interviews_one=0;
+                            $count_behavior_motivation_one=0;
+                            $count_personal_effectiveness_one=0;
+                            $count_career_growth_one=0;
+                            $count_skill_set_one=0;
+						  foreach($ews_detail_lastmonths as $key=>$value)
+								{
+									$count_one_on_one_one=$value['ews_detail']['one_on_one_ass'];
+                        $count_perfomance_one=$value['ews_detail']['performance'];
+                        $count_leave_r_one=$value['ews_detail']['leave_r'];
+                        $count_external_interviews_one=$value['ews_detail']['external_interviews'];
+                        $count_behavior_motivation_one=$value['ews_detail']['behavior_motivation'];
+                        $count_personal_effectiveness_one=$value['ews_detail']['personal_effectiveness'];
+                        $count_career_growth_one=$value['ews_detail']['career_growth'];
+                        $count_skill_set_one=$value['ews_detail']['skill_set'];
+								$events_detail_total=$value['ews_detail']['one_on_one_ass']+$value['ews_detail']['performance']+$value['ews_detail']['leave_r']+$value['ews_detail']['external_interviews']+$value['ews_detail']['behavior_motivation']+$value['ews_detail']['personal_effectiveness']+$value['ews_detail']['career_growth']+$value['ews_detail']['skill_set'];
+								$count_r_r_one = $events_detail_total;
+							}
   if ($assesment_month == 0) {
         $assesment_month = '';
     } else {
@@ -238,6 +528,7 @@ $mysql = new mysql();
               <div class="row">
                 <form action="" method="get" name="userews" id="employee_wise_search">
 				<?php
+
 				 if($_SESSION['user_type']==5)
 				 {
 				 ?>
@@ -352,9 +643,25 @@ $mysql = new mysql();
               </div>
             </div>
           </div>
-          <div class="box-body table-responsive no-padding">
-            <div id="chartdivtrends" style="width: 100%; height: 300px;"></div>
-            </div>
+         
+    <div class="box box-success" id="chartdiv">
+      <div class="box-header with-border" style="text-align:center;">
+        <h3 class="box-title">Score Trend</h3>
+      <div class="box-tools pull-right">
+          <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i> </button>
+        </div>
+        <!-- /.box-tools -->
+      </div>
+      <!-- /.box-header -->
+      <div class="box-body table-responsive no-padding">
+	   <div id="chartdivtrends" style="width: 100%; height: 300px;"></div>
+      </div>
+      <div class="box-body table-responsive no-padding">
+	   <div id="chartdivtrendz" style="width: 100%; height: 300px;"></div>
+      </div>
+      <!-- /.box-body -->
+    </div>
+ 
           <?php if(!empty($users_ews)) { ?>
           <div class="box box-success">
             <div class="box-body table-responsive no-padding">
@@ -373,10 +680,12 @@ $mysql = new mysql();
                   <?php $report_value = array(); 
 
                   foreach ($users_ews as $users_ewsss) {
+                  	//print_r($users_ews);
 			                  	$events_detail_total_sum =$users_ewsss['ews_detail']['one_on_one_ass']+$users_ewsss['ews_detail']['performance']+$users_ewsss['ews_detail']['leave_r']+$users_ewsss['ews_detail']['external_interviews']+$users_ewsss['ews_detail']['behavior_motivation']+$users_ewsss['ews_detail']['personal_effectiveness']+$users_ewsss['ews_detail']['career_growth']+$users_ewsss['ews_detail']['skill_set'];
 			                  	$report_value[] = $events_detail_total_sum;
 			                 
                   }
+                  //print_r($report_value);
                   
 				  foreach($users_ews as $key=>$value_ews)
 									 { 	 
@@ -651,9 +960,9 @@ $mysql = new mysql();
 <!-- ./wrapper -->
 <?php include_once('includes/alljs.php'); ?>
 <script>
-$('#chartdivtrends').hide();
+$('#chartdiv').hide();
 $('#filter_report').click(function(){
-	$('#chartdivtrends').show();
+	$('#chartdiv').show();
 })	
 jQuery(document).ready(function(){
 		  jQuery("#employee_wise_search").validate({
@@ -675,6 +984,7 @@ jQuery(document).ready(function(){
 
 });
 </script>
+
 <script  type="text/javascript">
 	$(document).ready(function() {
 	
@@ -697,80 +1007,77 @@ jQuery(document).ready(function(){
 		});
     });
 </script>
-<script type="text/javascript">
+
+        	<script type="text/javascript">
             var chart;
             var chartData = [
                 {
-                    "month": 'Feb 2018',
-                    "lowrisk": <?php echo $report_value[2];?>,
+                    "month": '<?php echo date('M Y', strtotime('first day of -11 month'));?>',
+                    "lowrisk":<?php echo $count_r_r_twelve; ?> 
+                },
+                {
+                    "month": '<?php echo date('M Y', strtotime('first day of -10 month'));?>',
+                  
+                    "lowrisk": <?php echo $count_r_r_eleven; ?>
+				                },
+                {
+                    "month": '<?php echo date('M Y', strtotime('first day of -9 month'));?>',
+                    "lowrisk":<?php echo $count_r_r_ten; ?>
+					
+                },
+                {
+                    "month": '<?php echo date('M Y', strtotime('first day of -8 month'));?>',
+                       "lowrisk": <?php echo $count_r_r_nine; ?>
+         
+                },
+                {
+                    "month": '<?php echo date('M Y', strtotime('first day of -7 month'));?>',
+                       "lowrisk": <?php echo $count_r_r_eight; ?>
+                   
+                },
+                {
+                    "month": '<?php echo date('M Y', strtotime('first day of -6 month'));?>',
 
-					// "urllowrisk": "http://demo-ews.stratemis.com/risk_wise.php?emp_id=&ews_status=3&assesment_month=2018-02-01&fromdate_filter=&todate_filter=&filter_submit="
+                    "lowrisk": <?php echo $count_r_r_seven; ?>
+					
                 },
                 {
-                    "month": 'Mar 2018',
-                    "lowrisk": <?php echo $report_value[3];?>,
-                    
-					// "lowrisk": "http://demo-ews.stratemis.com/risk_wise.php?emp_id=&ews_status=3&assesment_month=2018-03-01&fromdate_filter=&todate_filter=&filter_submit="
+                    "month": '<?php echo date('M Y', strtotime('first day of -5 month'));?>',
+
+                    "lowrisk": <?php echo $count_r_r_six; ?>
+					
                 },
                 {
-                    "month": 'Apr 2018',
-                    "lowrisk": <?php echo $report_value[4];?>,
-                   
-					// "urllowrisk": "http://demo-ews.stratemis.com/risk_wise.php?emp_id=&ews_status=3&assesment_month=2018-04-01&fromdate_filter=&todate_filter=&filter_submit="
+                    "month": '<?php echo date('M Y', strtotime('first day of -4 month'));?>',
+
+                    "lowrisk": <?php echo $count_r_r_five; ?>
+					
                 },
                 {
-                    "month": 'May 2018',
-                    "lowrisk": <?php echo $report_value[5];?>,
-                   
-					// "urllowrisk": "http://demo-ews.stratemis.com/risk_wise.php?emp_id=&ews_status=3&assesment_month=2018-05-01&fromdate_filter=&todate_filter=&filter_submit="
+                     "month": '<?php echo date('M Y', strtotime('first day of -3 month'));?>',
+                    //  "highrisk": 4,
+                    // "mediumrisk": 4,
+                    "lowrisk": <?php echo $count_r_r_four; ?>
+				
                 },
                 {
-                    "month": 'Jun 2018',
-                    "lowrisk":<?php echo $report_value[6];?>,
-                   
-					// "urllowrisk": "http://demo-ews.stratemis.com/risk_wise.php?emp_id=&ews_status=3&assesment_month=2018-06-01&fromdate_filter=&todate_filter=&filter_submit="
+                    "month": '<?php echo date('M Y', strtotime('first day of -2 month'));?>',
+                    // "highrisk": 3,
+                    // "mediumrisk": 3,
+                    "lowrisk": <?php echo $count_r_r_three; ?>
+					
                 },
                 {
-                    "month": 'Jul 2018',
-                    "lowrisk": <?php echo $report_value[7];?>,
-                   
-					// "urllowrisk": "http://demo-ews.stratemis.com/risk_wise.php?emp_id=&ews_status=3&assesment_month=2018-07-01&fromdate_filter=&todate_filter=&filter_submit="
-                },
-                {
-                    "month": 'Aug 2018',
-                    "lowrisk": <?php echo $report_value[8];?>,
-                   
-					// "urllowrisk": "http://demo-ews.stratemis.com/risk_wise.php?emp_id=&ews_status=3&assesment_month=2018-08-01&fromdate_filter=&todate_filter=&filter_submit="
-                },
-                {
-                    "month": 'Sep 2018',
-                    "lowrisk": <?php echo $report_value[9];?>,
-                   
-					// "urllowrisk": "http://demo-ews.stratemis.com/risk_wise.php?emp_id=&ews_status=3&assesment_month=2018-09-01&fromdate_filter=&todate_filter=&filter_submit="
-                },
-                {
-                    "month": 'Oct 2018',
-                     "lowrisk": <?php echo $report_value[10];?>,
-                 
-					// "urllowrisk": "http://demo-ews.stratemis.com/risk_wise.php?emp_id=&ews_status=3&assesment_month=2018-10-01&fromdate_filter=&todate_filter=&filter_submit="
-                },
-                {
-                    "month": 'Nov 2018',
-                    "lowrisk": <?php echo $report_value[11];?>,
-                   
-					// "urllowrisk": "http://demo-ews.stratemis.com/risk_wise.php?emp_id=&ews_status=3&assesment_month=2018-11-01&fromdate_filter=&todate_filter=&filter_submit="
-                },
-                {
-                    "month": 'Dec 2018',
-                    "lowrisk": <?php echo $report_value[12];?>,
-                    
-					// "urllowrisk": "http://demo-ews.stratemis.com/risk_wise.php?emp_id=&ews_status=3&assesment_month=2018-12-01&fromdate_filter=&todate_filter=&filter_submit="
+                    "month": '<?php echo date('M Y', strtotime('first day of -1 month'));?>',
+     
+                    "lowrisk": <?php echo $count_r_r_two; ?>
+					
                 },
 				{
-                    "month": 'Jan 2019',
-                    "lowrisk": <?php echo $report_value[0]?>,
-                 
-					// "urllowrisk": "http://demo-ews.stratemis.com/risk_wise.php?emp_id=&ews_status=3&assesment_month=2019-01-01&fromdate_filter=&todate_filter=&filter_submit="
+                    "month": '<?php echo date('M Y', strtotime('first day of this month'));?>',
+
+                    "lowrisk": <?php echo $count_r_r_one; ?>
+					
                 }
             ];
             AmCharts.ready(function () {
@@ -797,36 +1104,13 @@ jQuery(document).ready(function(){
                 valueAxis.dashLength = 5;
                 valueAxis.axisAlpha = 0;
                 valueAxis.integersOnly = true;
-				valueAxis.title = "Score";
+				valueAxis.title = "EWS Score";
                 valueAxis.gridCount = 10;
                 valueAxis.reversed = false; // this line makes the value axis reversed
                 chart.addValueAxis(valueAxis);
 
                 // GRAPHS
-                // High Risk graph
-    //             var graph = new AmCharts.AmGraph();
-    //             graph.title = "High Risk";
-				// graph.lineColor = "#dd4b39";
-    //             graph.valueField = "highrisk";
-				// graph.urlField = "urlhighrisk";
-    //             graph.balloonText = "<span style='color:#00a65a'><b>[[title]]</b></span><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>";
-    //             graph.bullet = "round";
-				// graph.bulletSize = 15;
-				// graph.lineThickness = 1.5;
-    //             chart.addGraph(graph);
-
-                // Medium Risk graph
-    //             var graph = new AmCharts.AmGraph();
-    //             graph.title = "Medium Risk";
-				// graph.lineColor = "#f39c12";
-    //             graph.valueField = "mediumrisk";
-				// graph.urlField = "urlmediumrisk";
-    //             graph.balloonText = "<span style='color:#f39c12'><b>[[title]]</b></span><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>";
-    //             graph.bullet = "round";
-				// graph.bulletSize = 10;
-				// graph.lineThickness = 1.5;
-    //             chart.addGraph(graph);
-
+                
                 // Low Risk graph
                 var graph = new AmCharts.AmGraph();
                 graph.title = "Score";
@@ -843,5 +1127,293 @@ jQuery(document).ready(function(){
                 chart.write("chartdivtrends");
             });
         </script>
+<script type="text/javascript">
+            var chart_1;
+            var chartData_1 = [
+                {
+                    "month": '<?php echo date('M Y', strtotime('first day of -11 month'));?>',
+                    "highrisk": <?php echo $count_perfomance_twelve;?>,
+"mediumrisk": <?php echo $count_one_on_one_twelve;?>,
+"lowrisk": <?php echo $count_leave_r_twelve;?>,
+"highrisk_1": <?php echo $count_external_interviews_twelve;?>,
+"mediumrisk_1": <?php echo $count_behavior_motivation_twelve;?>,
+"lowrisk_1": <?php echo $count_personal_effectiveness_twelve;?>,
+"highrisk_2": <?php echo $count_career_growth_twelve;?>,
+"mediumrisk_2": <?php echo $count_skill_set_twelve;?>
+
+			
+                },
+                {
+                    "month": '<?php echo date('M Y', strtotime('first day of -10 month'));?>',
+                    "highrisk": <?php echo $count_perfomance_eleven;?>,
+"mediumrisk": <?php echo $count_one_on_one_eleven;?>,
+"lowrisk": <?php echo $count_leave_r_eleven;?>,
+"highrisk_1": <?php echo $count_external_interviews_eleven;?>,
+"mediumrisk_1": <?php echo $count_behavior_motivation_eleven;?>,
+"lowrisk_1": <?php echo $count_personal_effectiveness_eleven;?>,
+"highrisk_2": <?php echo $count_career_growth_eleven;?>,
+"mediumrisk_2": <?php echo $count_skill_set_eleven;?>
+                },
+                {
+                    "month": '<?php echo date('M Y', strtotime('first day of -9 month'));?>',
+                     "highrisk": <?php echo $count_perfomance_ten;?>,
+"mediumrisk": <?php echo $count_one_on_one_ten;?>,
+"lowrisk": <?php echo $count_leave_r_ten;?>,
+"highrisk_1": <?php echo $count_external_interviews_ten;?>,
+"mediumrisk_1": <?php echo $count_behavior_motivation_ten;?>,
+"lowrisk_1": <?php echo $count_personal_effectiveness_ten;?>,
+"highrisk_2": <?php echo $count_career_growth_ten;?>,
+"mediumrisk_2": <?php echo $count_skill_set_ten;?>
+                },
+                {
+                    "month": '<?php echo date('M Y', strtotime('first day of -8 month'));?>',
+                   "highrisk": <?php echo $count_perfomance_nine;?>,
+"mediumrisk": <?php echo $count_one_on_one_nine;?>,
+"lowrisk": <?php echo $count_leave_r_nine;?>,
+"highrisk_1": <?php echo $count_external_interviews_nine;?>,
+"mediumrisk_1": <?php echo $count_behavior_motivation_nine;?>,
+"lowrisk_1": <?php echo $count_personal_effectiveness_nine;?>,
+"highrisk_2": <?php echo $count_career_growth_nine;?>,
+"mediumrisk_2": <?php echo $count_skill_set_nine;?>
+                },
+                {
+                    "month": '<?php echo date('M Y', strtotime('first day of -7 month'));?>',
+              "highrisk": <?php echo $count_perfomance_eight;?>,
+"mediumrisk": <?php echo $count_one_on_one_eight;?>,
+"lowrisk": <?php echo $count_leave_r_eight;?>,
+"highrisk_1": <?php echo $count_external_interviews_eight;?>,
+"mediumrisk_1": <?php echo $count_behavior_motivation_eight;?>,
+"lowrisk_1": <?php echo $count_personal_effectiveness_eight;?>,
+"highrisk_2": <?php echo $count_career_growth_eight;?>,
+"mediumrisk_2": <?php echo $count_skill_set_eight;?>
+                },
+                {
+                    "month": '<?php echo date('M Y', strtotime('first day of -6 month'));?>',
+                    
+ "highrisk": <?php echo $count_perfomance_seven;?>,
+"mediumrisk": <?php echo $count_one_on_one_seven;?>,
+"lowrisk": <?php echo $count_leave_r_seven;?>,
+"highrisk_1": <?php echo $count_external_interviews_seven;?>,
+"mediumrisk_1": <?php echo $count_behavior_motivation_seven;?>,
+"lowrisk_1": <?php echo $count_personal_effectiveness_seven;?>,
+"highrisk_2": <?php echo $count_career_growth_seven;?>,
+"mediumrisk_2": <?php echo $count_skill_set_seven;?>
+                },
+                {
+                    "month": '<?php echo date('M Y', strtotime('first day of -5 month'));?>',
+                     "highrisk": <?php echo $count_perfomance_six;?>,
+"mediumrisk": <?php echo $count_one_on_one_six;?>,
+"lowrisk": <?php echo $count_leave_r_six;?>,
+"highrisk_1": <?php echo $count_external_interviews_six;?>,
+"mediumrisk_1": <?php echo $count_behavior_motivation_six;?>,
+"lowrisk_1": <?php echo $count_personal_effectiveness_six;?>,
+"highrisk_2": <?php echo $count_career_growth_six;?>,
+"mediumrisk_2": <?php echo $count_skill_set_six;?>
+                },
+                {
+                    "month": '<?php echo date('M Y', strtotime('first day of -4 month'));?>',
+                    "highrisk": <?php echo $count_perfomance_five;?>,
+"mediumrisk": <?php echo $count_one_on_one_five;?>,
+"lowrisk": <?php echo $count_leave_r_five;?>,
+"highrisk_1": <?php echo $count_external_interviews_five;?>,
+"mediumrisk_1": <?php echo $count_behavior_motivation_five;?>,
+"lowrisk_1": <?php echo $count_personal_effectiveness_five;?>,
+"highrisk_2": <?php echo $count_career_growth_five;?>,
+"mediumrisk_2": <?php echo $count_skill_set_five;?>
+                },
+                {
+                    "month": '<?php echo date('M Y', strtotime('first day of -3 month'));?>',
+                     "highrisk": <?php echo $count_perfomance_four;?>,
+"mediumrisk": <?php echo $count_one_on_one_four;?>,
+"lowrisk": <?php echo $count_leave_r_four;?>,
+"highrisk_1": <?php echo $count_external_interviews_four;?>,
+"mediumrisk_1": <?php echo $count_behavior_motivation_four;?>,
+"lowrisk_1": <?php echo $count_personal_effectiveness_four;?>,
+"highrisk_2": <?php echo $count_career_growth_four;?>,
+"mediumrisk_2": <?php echo $count_skill_set_four;?>
+                },
+                {
+                    "month": '<?php echo date('M Y', strtotime('first day of -2 month'));?>',
+                   "highrisk": <?php echo $count_perfomance_three;?>,
+"mediumrisk": <?php echo $count_one_on_one_three;?>,
+"lowrisk": <?php echo $count_leave_r_three;?>,
+"highrisk_1": <?php echo $count_external_interviews_three;?>,
+"mediumrisk_1": <?php echo $count_behavior_motivation_three;?>,
+"lowrisk_1": <?php echo $count_personal_effectiveness_three;?>,
+"highrisk_2": <?php echo $count_career_growth_three;?>,
+"mediumrisk_2": <?php echo $count_skill_set_three;?>
+                },
+                {
+                    "month": '<?php echo date('M Y', strtotime('first day of -1 month'));?>',
+                   "highrisk": <?php echo $count_perfomance_two;?>,
+"mediumrisk": <?php echo $count_one_on_one_two;?>,
+"lowrisk": <?php echo $count_leave_r_two;?>,
+"highrisk_1": <?php echo $count_external_interviews_two;?>,
+"mediumrisk_1": <?php echo $count_behavior_motivation_two;?>,
+"lowrisk_1": <?php echo $count_personal_effectiveness_two;?>,
+"highrisk_2": <?php echo $count_career_growth_two;?>,
+"mediumrisk_2": <?php echo $count_skill_set_two;?>
+                },
+				{
+                    "month": '<?php echo date('M Y', strtotime('first day of this month'));?>',
+                    "highrisk": <?php echo $count_perfomance_one;?>,
+"mediumrisk": <?php echo $count_one_on_one_one;?>,
+"lowrisk": <?php echo $count_leave_r_one;?>,
+"highrisk_1": <?php echo $count_external_interviews_one;?>,
+"mediumrisk_1": <?php echo $count_behavior_motivation_one;?>,
+"lowrisk_1": <?php echo $count_personal_effectiveness_one;?>,
+"highrisk_2": <?php echo $count_career_growth_one;?>,
+"mediumrisk_2": <?php echo $count_skill_set_one;?>
+                }
+            ];
+            AmCharts.ready(function () {
+                // SERIAL CHART
+                chart_1 = new AmCharts.AmSerialChart();
+                chart_1.dataProvider = chartData_1;
+                chart_1.categoryField = "month";
+                chart_1.startDuration = .3;
+                chart_1.balloon.color = "#000000";
+
+                // AXES
+                // category
+                var categoryAxis = chart_1.categoryAxis;
+                categoryAxis.fillAlpha = 1;
+                categoryAxis.fillColor = "#FAFAFA";
+                categoryAxis.gridAlpha = 0;
+                categoryAxis.axisAlpha = 0;
+				categoryAxis.title = "Months";
+                categoryAxis.gridPosition = "start";
+                categoryAxis.position = "bottom";
+
+                // value
+                var valueAxis = new AmCharts.ValueAxis();
+                valueAxis.dashLength = 5;
+                valueAxis.axisAlpha = 0;
+                valueAxis.integersOnly = true;
+				valueAxis.title = "Risk Score";
+                valueAxis.gridCount = 10;
+                valueAxis.reversed = false; // this line makes the value axis reversed
+                chart_1.addValueAxis(valueAxis);
+
+                // GRAPHS
+                // High Risk graph
+                var graph = new AmCharts.AmGraph();
+                graph.title = "Performance";
+				graph.lineColor = "#dd4b39";
+                graph.valueField = "highrisk";
+				graph.urlField = "urlhighrisk";
+                graph.balloonText = "<span style='color:##ff0000'><b>[[title]]</b></span><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>";
+                graph.bullet = "round";
+				graph.bulletSize = 15;
+				graph.lineThickness = 1.5;
+                chart_1.addGraph(graph);
+
+                // Medium Risk graph
+                var graph = new AmCharts.AmGraph();
+                graph.title = "One on one Assesment";
+				graph.lineColor = "#f39c12";
+                graph.valueField = "mediumrisk";
+				graph.urlField = "urlmediumrisk";
+                graph.balloonText = "<span style='color:#ff8000'><b>[[title]]</b></span><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>";
+                graph.bullet = "round";
+				graph.bulletSize = 10;
+				graph.lineThickness = 1.5;
+                chart_1.addGraph(graph);
+
+                // Low Risk graph
+                var graph = new AmCharts.AmGraph();
+                graph.title = "Leave";
+				graph.lineColor = "#00a65a";
+                graph.valueField = "lowrisk";
+				graph.urlField = "urllowrisk";
+                graph.balloonText = "<span style='color:#ffff00'><b>[[title]]</b></span><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>";
+                graph.bullet = "round";
+				graph.bulletSize = 8;
+				graph.lineThickness = 1.5;
+                chart_1.addGraph(graph);
+
+                 // High Risk graph
+                var graph = new AmCharts.AmGraph();
+                graph.title = "External Interview";
+				graph.lineColor = "#dd4b39";
+                graph.valueField = "highrisk_1";
+				graph.urlField = "urlhighrisk";
+                graph.balloonText = "<span style='color:#80ff00'><b>[[title]]</b></span><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>";
+                graph.bullet = "round";
+				graph.bulletSize = 15;
+				graph.lineThickness = 1.5;
+                chart_1.addGraph(graph);
+
+                // Medium Risk graph
+                var graph = new AmCharts.AmGraph();
+                graph.title = "Behaviour Motivation";
+				graph.lineColor = "#f39c12";
+                graph.valueField = "mediumrisk_1";
+				graph.urlField = "urlmediumrisk";
+                graph.balloonText = "<span style='color:#0040ff'><b>[[title]]</b></span><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>";
+                graph.bullet = "round";
+				graph.bulletSize = 10;
+				graph.lineThickness = 1.5;
+                chart_1.addGraph(graph);
+
+
+                
+                var graph = new AmCharts.AmGraph();
+                graph.title = "Personal Effectiveness";
+				graph.lineColor = "#00a65a";
+                graph.valueField = "lowrisk_1";
+				graph.urlField = "urllowrisk";
+                graph.balloonText = "<span style='color:#ff0080'><b>[[title]]</b></span><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>";
+                graph.bullet = "round";
+				graph.bulletSize = 8;
+				graph.lineThickness = 1.5;
+                chart_1.addGraph(graph);
+
+
+
+                 // High Risk graph
+                var graph = new AmCharts.AmGraph();
+                graph.title = "Carrer Growth";
+				graph.lineColor = "#dd4b39";
+                graph.valueField = "highrisk_2";
+				graph.urlField = "urlhighrisk";
+                graph.balloonText = "<span style='color:#ff0000'><b>[[title]]</b></span><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>";
+                graph.bullet = "round";
+				graph.bulletSize = 15;
+				graph.lineThickness = 1.5;
+                chart_1.addGraph(graph);
+
+                // Medium Risk graph
+                var graph = new AmCharts.AmGraph();
+                graph.title = "Skill Set";
+				graph.lineColor = "#f39c12";
+                graph.valueField = "mediumrisk_2";
+				graph.urlField = "urlmediumrisk";
+                graph.balloonText = "<span style='color:#f39c10'><b>[[title]]</b></span><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>";
+                graph.bullet = "round";
+				graph.bulletSize = 10;
+				graph.lineThickness = 1.5;
+                chart_1.addGraph(graph);
+
+
+                
+                var graph = new AmCharts.AmGraph();
+                graph.title = "Low Risk2";
+				graph.lineColor = "#00a65a";
+                graph.valueField = "lowrisk_2";
+				graph.urlField = "urllowrisk";
+                graph.balloonText = "<span style='color:#00a63a'><b>[[title]]</b></span><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>";
+                graph.bullet = "round";
+				graph.bulletSize = 8;
+				graph.lineThickness = 1.5;
+                chart_1.addGraph(graph);
+
+                // WRITE
+                chart_1.write("chartdivtrendz");
+            });
+        </script>
+
+
+
 </body>
 </html>
